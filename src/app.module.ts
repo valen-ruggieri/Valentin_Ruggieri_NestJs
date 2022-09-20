@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { UsersModule } from './users/users.module';
+import { CartsModule } from './carts/carts.module';
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -15,6 +16,7 @@ import { UsersModule } from './users/users.module';
     MongooseModule.forRoot(
       'mongodb+srv://valentin_ruggieri:3wSixuIMse94iPpz@cluster0.lur2f.mongodb.net/nest',
     ),
+    CartsModule,
   ],
   controllers: [],
   providers: [],
