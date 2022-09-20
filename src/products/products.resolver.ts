@@ -13,19 +13,19 @@ export class ProductsResolver {
   }
   @Mutation(() => Product)
   async postProduct(
-    @Args('createProduct') createProduct: CreateProductInput,
+    @Args('input') createProduct: CreateProductInput,
   ): Promise<Product> {
     return await this.productService.postProduct(createProduct);
   }
   @Mutation(() => Product)
   async putProduct(
-    @Args('updateProduct') updateProduct: UpdateProductInput,
+    @Args('input') updateProduct: UpdateProductInput,
   ): Promise<Product> {
     return await this.productService.putProduct(updateProduct);
   }
   @Mutation(() => Product)
   async deleteProduct(
-    @Args('deleteProduct') deleteProduct: DeleteProductInput,
+    @Args('input') deleteProduct: DeleteProductInput,
   ): Promise<Product> {
     return await this.productService.deleteProduct(deleteProduct);
   }
